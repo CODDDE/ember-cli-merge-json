@@ -31,7 +31,7 @@ ENV['ember-cli-merge-json'] = {
 Given the aforementioned configuration and `language` folder with the following content:
 ```
 ├─┬ languages
-├── excluded_file.json
+  ├── excluded_file.json
   └─┬ en
     ├── index.json
     ├── global.json
