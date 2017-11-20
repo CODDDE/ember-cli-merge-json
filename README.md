@@ -27,6 +27,9 @@ ENV['ember-cli-merge-json'] = {
 }
 ```
 
+The addon would create a .json for each **first level** sub directory in `srcDir`.
+Deeper lever directories will be mapped as sub-objects of json file corresponding
+to the first level directory.
 
 Given the aforementioned configuration and `language` folder with the following content:
 ```
@@ -66,7 +69,9 @@ with the following content:
 }
 ```
 
-**Note** that file stored at the first level of `srcDir` are ignored.
+**Note** that file stored at the first level of `srcDir` is ignored. Also, sub-directory `components` is
+mapped as an object part of the main `en.json` file.
+
 
 
 # Contribute
