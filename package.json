@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-merge-json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Merge multiple json files into one file at compile time.",
   "keywords": [
     "ember-addon",

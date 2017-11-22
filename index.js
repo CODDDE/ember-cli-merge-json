@@ -3,6 +3,7 @@
 
 const MergeTrees = require('broccoli-merge-trees');
 const MergeJSON = require('broccoli-merge-json');
+const path = require('path');
 
 module.exports = {
   name: 'ember-cli-merge-json',
@@ -22,7 +23,8 @@ module.exports = {
 
   treeForPublic(tree) {
     if (this._options.enabled === true) {
-      const jsons = new MergeJSON(this.app.project.root, this._options);
+      const inputNode = path.join(this.app.project.root, this._options.srcDir);
+      const jsons = new MergeJSON(inputNode, this._options);
       return tree ? new MergeTrees([tree, jsons]) : jsons;
     } else {
       return tree;
